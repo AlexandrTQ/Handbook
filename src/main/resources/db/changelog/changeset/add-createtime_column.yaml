@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: addColumn-createTime
+      author: Alexander
+      changes:
+        - addColumn:
+            tableName: cars
+            columns:
+              - column:
+                  name: create_data
+                  type: datetime
+                  constraints:
+                    nullable: false

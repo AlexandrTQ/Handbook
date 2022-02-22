@@ -1,0 +1,25 @@
+spring:
+  liquibase:
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/handbook
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    username: postgres
+    password: 1945
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      show_sql: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+          sql:
+          BasicBinder: TRACE
+
